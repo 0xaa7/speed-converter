@@ -11,7 +11,7 @@ const Combined = (props) => {
         <div>
            <form>
               <legend>Enter speed in {props.type}</legend>
-                <label >Kmph</label>
+                <label ></label>
                     <input onChange={onChangeHandler} value={props.speed}/>
             </form>
         </div>
