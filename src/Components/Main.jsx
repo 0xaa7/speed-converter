@@ -29,6 +29,10 @@ const Main = () => {
     }
   }
 
+  
+// CODE USED BEFORE 
+
+
 //   const callbackKmph = (speed) => {
 //     speed = parseInt(speed);
 //     setSpeedObject({
@@ -49,7 +53,11 @@ const Main = () => {
     <div>
       <Combined type="Kmph" speed={speedObject.Kmph} callback={callBack} />
       <Combined type="Mph" speed={speedObject.Mph} callback={callBack} />
-      {/* <Combined type="Kmph" speed={speedObject.Kmph} callback={callbackKmph} />
+
+
+       {/* CODE USED BEFORE */}
+
+     { /* <Combined type="Kmph" speed={speedObject.Kmph} callback={callbackKmph} />
       <Combined type="Mph" speed={speedObject.Mph} callback={callbackMph} /> */}
     </div>
   );
