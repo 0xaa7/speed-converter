@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Kmph from "./kmph";
-import Mph from "./mph";
+// import Kmph from "./kmph";
+// import Mph from "./mph";
+import Combined from "./combined";
 
 const initialState = {
   Kmph: 0,
@@ -28,8 +29,8 @@ const Main = () => {
 
   return (
     <div>
-      <Kmph speed={speedObject.Kmph} callback={callbackKmph} />
-      <Mph speed={speedObject.Mph} callback={callbackMph} />
+      <Combined type="Kmph" speed={speedObject.Kmph} callback={callbackKmph} />
+      <Combined type="Mph" speed={speedObject.Mph} callback={callbackMph} />
     </div>
   );
 };
