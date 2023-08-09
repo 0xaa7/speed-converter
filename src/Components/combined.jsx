@@ -3,8 +3,7 @@ import React from "react";
 const Combined = (props) => {
  
     const onChangeHandler = (e) => {
-            const speed = parseInt(e.target.value);
-            props.callback(speed);        
+    props.callback(parseFloat(e.target.value), parseFloat(e.target.valueMph));      
         };
      
      return(

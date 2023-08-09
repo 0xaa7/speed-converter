@@ -33,20 +33,18 @@ const Main = () => {
 
 
   // CODE USED TO PRESERVE THE STATE
-  const CallBack = (Kmph, Mph) => {
-  if (Kmph) {
-    Kmph = parseInt(Kmph);
+  const CallBack = (speed, isKmph) => {
+  if (isKmph) {
     setSpeedObject({
       ...speedObject,
-      Kmph: Kmph,
-      Mph: Kmph * 0.621371,
+      Kmph: speed,
+      Mph: speed * 0.621371,
     });
-  } else if (Mph) {
-    Mph = parseInt(Mph);
+  } else  {
     setSpeedObject({
       ...speedObject,
-      Kmph: Mph / 0.621371,
-      Mph: Mph,
+      Kmph: speed / 0.621371,
+      Mph: speed,
     });
   }
 };
