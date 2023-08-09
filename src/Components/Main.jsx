@@ -11,23 +11,46 @@ const initialState = {
 const Main = () => {
   const [speedObject, setSpeedObject] = useState(initialState);
 
-  const callBack = (Kmph, Mph) => {
+  // PREVIOUS CODE USED
+
+  // const callBack = (Kmph, Mph) => {
    
-    if(Kmph){
-        Kmph = parseInt(Kmph);
-        setSpeedObject({
-       Kmph: Kmph,
-       Mph: Kmph * 0.621371, 
-     });
-    } 
-    else if (Mph) {
-        Mph = parseInt(Mph);
-        setSpeedObject({
-       Kmph: Mph / 0.621371, 
-       Mph: Mph,
-     });
-    }
+  //   if(Kmph){
+  //       Kmph = parseInt(Kmph);
+  //       setSpeedObject({
+  //      Kmph: Kmph,
+  //      Mph: Kmph * 0.621371, 
+  //    });
+  //   } 
+  //   else if (Mph) {
+  //       Mph = parseInt(Mph);
+  //       setSpeedObject({
+  //      Kmph: Mph / 0.621371, 
+  //      Mph: Mph,
+  //    });
+  //   }
+  // }
+
+
+  // CODE USED TO PRESERVE THE STATE
+  const callBack = (Kmph, Mph) => {
+  if (Kmph) {
+    Kmph = parseInt(Kmph);
+    setSpeedObject({
+      ...speedObject,
+      Kmph: Kmph,
+      Mph: Kmph * 0.621371,
+    });
+  } else if (Mph) {
+    Mph = parseInt(Mph);
+    setSpeedObject({
+      ...speedObject,
+      Kmph: Mph / 0.621371,
+      Mph: Mph,
+    });
   }
+};
+
 
   
 // CODE USED BEFORE 
