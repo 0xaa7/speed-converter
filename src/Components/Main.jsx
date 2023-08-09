@@ -33,7 +33,7 @@ const Main = () => {
 
 
   // CODE USED TO PRESERVE THE STATE
-  const callBack = (Kmph, Mph) => {
+  const CallBack = (Kmph, Mph) => {
   if (Kmph) {
     Kmph = parseInt(Kmph);
     setSpeedObject({
@@ -74,8 +74,8 @@ const Main = () => {
 
   return (
     <div>
-      <Combined type="Kmph" speed={speedObject.Kmph} callback={callBack} />
-      <Combined type="Mph" speed={speedObject.Mph} callback={callBack} />
+      <Combined type="Kmph" speed={speedObject.Kmph} callback={(speed) => CallBack(speed, true)} />
+      <Combined type="Mph" speed={speedObject.Mph} callback={(speed) => CallBack(speed, true)}/>
 
 
        {/* CODE USED BEFORE */}
