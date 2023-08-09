@@ -75,7 +75,7 @@ const Main = () => {
   return (
     <div>
       <Combined type="Kmph" speed={speedObject.Kmph} callback={(speed) => CallBack(speed, true)} />
-      <Combined type="Mph" speed={speedObject.Mph} callback={(speed) => CallBack(speed, true)}/>
+      <Combined type="Mph" speed={speedObject.Mph} callback={(speed) => CallBack(speed, false)}/>
 
 
        {/* CODE USED BEFORE */}
